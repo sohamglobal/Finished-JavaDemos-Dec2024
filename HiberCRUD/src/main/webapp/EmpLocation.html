@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Location Form</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card border-primary">
+                    <div class="card-header bg-info text-white">
+                        <h4 class="mb-0">Change Employee Location</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="ChangeLocation.jsp" method="post">
+                            <div class="form-group">
+                                <label for="empNumber">Employee Number</label>
+                                <input type="text" class="form-control" id="empNumber" name="empNumber" pattern="\d{3}" title="Employee number must be exactly 3 digits" required>
+                                <small class="form-text text-muted">Please enter a 3-digit employee number.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">New Location</label>
+                                <input type="text" class="form-control" id="location" name="location" required>
+                            </div>
+                            <button type="submit" class="btn btn-info">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

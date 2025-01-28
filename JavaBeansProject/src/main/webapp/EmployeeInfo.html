@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Balance Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            margin-top: 50px;
+        }
+        .form-border {
+            border: 2px solid #007bff;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .form-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container form-container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="form-border">
+                    <div class="form-header">
+                        <h3>Employee Info</h3>
+                    </div>
+                    <form action="ShowEmpData.jsp" method="post">
+                        <div class="form-group">
+                            <label for="empNumber">Employee Number</label>
+                            <input type="text" class="form-control" id="empNumber" name="empNumber" required pattern="\d{3}" title="Please enter exactly 3 digits">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
