@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Information</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+    function createRequestObject() {
+        var tmpXmlHttpObject;
+        if (window.XMLHttpRequest) {
+                tmpXmlHttpObject = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+            tmpXmlHttpObject = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        return tmpXmlHttpObject;
+    }
+
+
+    var http = createRequestObject();
+
+    function makeGetRequest() {
+        no=document.getElementById("accountNumber").value;
+        http.open('get', 'ShowAccountInfo.jsp?accountNumber='+no);
+        http.onreadystatechange = processResponse;
+        http.send(null);
+    }
+
+    function processResponse() {
+        if(http.readyState == 4){
+            var response = http.responseText;
+            document.getElementById('res').innerHTML = response;
+        }
+    }
+    </script>
+    
+</head>
+<body>
+
+    <!-- Container for the page content -->
+    <div class="container mt-5">
+        <!-- Page heading -->
+        <div class="text-center mb-4">
+            <h1 class="display-4">Account Information</h1>
+        </div>
+        
+                
+        <!-- Form section -->
+        <div class="row justify-content-center">
+        
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                    
+                        <h5 class="card-title">Enter Account Number</h5>
+                        <form>
+                            <div class="form-group">
+                                <label for="accountNumber">Account Number</label>
+                                <input type="text" class="form-control" id="accountNumber" name="accountNumber" placeholder="Enter your account number" required>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-block" onclick="makeGetRequest()">Submit</button>
+                        </form>
+                        <br>
+						<span id="res" style="color:purple">Reserved for information</span>   
+						<br>
+						<a href="SearchAccounts.html">Search Accounts using AJAX</a> 
+						<br>
+						<a href="LinksAJAX.html">AJAX on Hyperlinks</a>                     
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
