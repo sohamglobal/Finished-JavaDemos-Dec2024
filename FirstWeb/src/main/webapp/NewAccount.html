@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .custom-form {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="custom-form">
+    <h2 class="mb-4">Account Details Form</h2>
+    <form method="post" action="OpenAccount">
+      <div class="form-group">
+        <label for="accountNumber">Account Number</label>
+        <input type="text" class="form-control" name="accountNumber" placeholder="Enter account number" required>
+      </div>
+      <div class="form-group">
+        <label for="accountName">Account Name</label>
+        <input type="text" class="form-control" name="accountName" placeholder="Enter account name" required>
+      </div>
+      <div class="form-group">
+        <label for="accountType">Account Type</label>
+        <select class="form-control" name="accountType" required>
+          <option value="">Select account type</option>
+          <option value="saving">Saving</option>
+          <option value="current">Current</option>
+          <option value="fixed">Fixed</option>
+          <option value="ppf">PPF</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="balance">Balance</label>
+        <input type="number" class="form-control" name="balance" placeholder="Enter balance" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
