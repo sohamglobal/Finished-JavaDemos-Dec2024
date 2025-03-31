@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="myscript.js"></script>
+    </head>
+    <body onload="welcome()">
+        <div class="container">
+            <br><br>
+            <h2>Registration Form</h2>
+            <hr>
+            <form name="frm" action="UserReg.jsp" method="post" onsubmit="return validate()">
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" name="unm" required class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Mobile</td>
+                        <td><input type="text" name="mob" required class="form-control"></td>
+                        <td><div id="err" style="color:crimson"></div></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Submit" class="btn btn-primary"></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        
+    </body>
+</html>

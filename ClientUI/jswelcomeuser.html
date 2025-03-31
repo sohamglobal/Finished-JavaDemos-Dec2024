@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script type="text/javascript">
+        function welcome()
+        {
+            //alert("welcome to javascript")
+            //nm=document.frm.unm.value
+            nm=document.forms["frm"]["unm"].value
+            document.getElementById("mess").innerText="Welcome "+nm+" to Javascript";
+        }
+
+    </script>
+</head>
+<body style="margin-top: 40px;">
+    <div class="container">
+        <h1 class="display-4">Welcome User</h1>
+        <hr>
+        <form name="frm">
+            UserName <input type="text" name="unm" autocomplete="off" required>
+            <input type="button" value="Show Message" onclick="welcome()">
+        </form>
+
+        <br>
+        <span id="mess" style="font-size: larger; color:rgb(154, 13, 140)"></span>
+    </div>
+    
+</body>
+</html>

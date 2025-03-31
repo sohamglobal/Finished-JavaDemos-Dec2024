@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script type="text/javascript">
+        function showDate()
+        {
+            dt=new Date()
+            document.getElementById("cdt").innerHTML=dt
+            //document.getElementById("cdt").innerHTML=dt.getDate()
+            //document.getElementById("cdt").innerHTML=dt.getMonth()+1
+            //document.getElementById("cdt").innerHTML=dt.getFullYear()
+            //document.getElementById("cdt").innerHTML=dt.getHours()
+            document.forms['frm']['jdt'].value=dt.getDate()+"/"+(dt.getMonth()+1)+"/"+dt.getFullYear()
+        }
+
+    </script>
+</head>
+<body onload="showDate()" style="margin-top: 40px;">
+    <div class="container">
+        <h1>Showing date...</h1>
+        <hr>
+        Current date time is : 
+        <span id="cdt"></span>
+<br><br>
+        <form name="frm">
+            Joining Date : <input type="text" name="jdt" readonly>
+            <input type="button" value="OK">
+        </form>
+
+    </div>
+    
+</body>
+</html>

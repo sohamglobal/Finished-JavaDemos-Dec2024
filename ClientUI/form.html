@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body style="margin-top: 40px;">
+    <div class="container">
+        <h1 class="display-4" style="color: crimson;">Registration form</h1>
+        <hr>
+
+        <form action="Register.jsp" method="post">
+            <table>
+                <tr>
+                    <td>UserID</td>
+                    <td><input type="text" name="uid" autocomplete="off" required class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="psw" autocomplete="off" required class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>UserName</td>
+                    <td><input type="text" name="unm" autocomplete="off" required class="form-control" placeholder="firstname lastname"></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><textarea name="adr" cols="30" rows="5" class="form-control"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="gen" value="male"> Male
+                        <input type="radio" name="gen" value="female"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobbies</td>
+                    <td>
+                        <input type="checkbox" name="hob1" value="mov"> Movies
+                        <input type="checkbox" name="hob2" value="mus"> Music
+                        <input type="checkbox" name="hob3" value="spo"> SPorts
+                    </td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>
+                        <select name="ct" class="form-control">
+                            <option value="mum">Mumbai</option>
+                            <option value="lon">London</option>
+                            <option value="dub">Dubai</option>
+                            <option value="kar">Karachi</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Resume</td>
+                    <td><input type="file" name="res" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Joining Date</td>
+                    <td><input type="date" name="jdt" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit" class="btn btn-outline-primary"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+<br>
+<a href="index.html"><img src="home.png" height="75"></a>
+    </div>
+    
+</body>
+</html>

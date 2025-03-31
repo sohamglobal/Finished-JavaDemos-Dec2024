@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script type="text/javascript">
+    function calcBill()
+    {
+        amt=document.forms["frm"]["amt"].value
+        disc=amt*9/100
+        netbill=amt-disc
+        document.getElementById("bill").innerHTML="Discount : "+disc+" NetBill : "+netbill
+    }   
+    function clearall()
+    {
+        document.getElementById("bill").innerHTML=""
+    }     
+
+    </script>
+</head>
+<body style="margin-top: 40px;">
+    <div class="container">
+        <h1 class="display-4">Billing Example</h1>
+        <hr>
+        <form name="frm">
+            <table>
+                <tr>
+                    <td>Customer Name</td>
+                    <td><input type="text" name="cnm" autocomplete="off" required class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Purchase Amount</td>
+                    <td><input type="number" name="amt" autocomplete="off" required class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Show Bill" onclick="calcBill()" class="btn btn-outline-primary"></td>
+                    <td><input type="button" value="Clear" onclick="clearall()" class="btn btn-outline-secondary"></td>
+                </tr>
+            </table>
+        </form>
+<br>
+<div id="bill">
+    <img src="coding.gif">
+</div>
+    </div>
+    
+    
+</body>
+</html>

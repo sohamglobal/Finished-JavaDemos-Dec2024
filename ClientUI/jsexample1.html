@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script type="text/javascript">
+        function hello()
+        {
+            document.getElementById("mess").innerHTML="Welcome to JavaScript";
+        }
+
+        function bye()
+        {
+            document.getElementById("mess").innerHTML="thanks for joining sohamglobal";
+        }
+
+        function clearmsg()
+        {
+            document.getElementById("mess").innerHTML="";
+        }
+
+    </script>
+</head>
+<body style="margin-top: 40px;">
+    <div class="container">
+        <h1 class="display-4">JavaScript welcome example</h1>
+        <hr>
+        <input type="button" value="Welcome" onclick="hello()" class="btn btn-outline-primary">
+        <input type="button" value="Thanks" onclick="bye()" class="btn btn-outline-secondary">
+        <input type="button" value="Clear" onclick="clearmsg()" class="btn btn-outline-info">
+<br><br>
+
+<div id="mess">
+    <img src="coding.gif">
+</div>
+
+    </div>
+
+    
+</body>
+</html>
